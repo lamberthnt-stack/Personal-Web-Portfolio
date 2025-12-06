@@ -1,0 +1,95 @@
+/* Basic styling */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #dba2f2;
+    color: #795391;
+}
+
+header {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    margin-top: 5px;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.section h2 {
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Project Cards */
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: linear-gradient(135deg, #d0a4ef, #f0f0f0);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    opacity: 0;
+    animation: slideUp 0.6s forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover Effect with Color Fade */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #5e718d, #d0f0ff);
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #7f90b3;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover {
+    color: #ff6600;
+}
+
+/* Center email */
+#contact p {
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
